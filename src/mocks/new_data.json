@@ -1,0 +1,138 @@
+{
+  "name": "Torneio de Jiu-Jitsu 2024",
+  "location": "São Paulo, Brazil",
+  "date": "2024-08-15",
+  "weightClass": "Leve",
+  "ageClass": "Adulto",
+  "gender": "Masculino",
+  "fighters": [
+    {
+      "id": 1,
+      "name": "João Silva",
+      "team": {
+        "name": "Gracie Barra"
+      },
+      "beltRank": "Azul"
+    },
+    {
+      "id": 2,
+      "name": "Mário Souza",
+      "team": {
+        "name": "Alliance Jiu-Jitsu"
+      },
+      "beltRank": "Roxa"
+    },
+    {
+      "id": 3,
+      "name": "Pedro Santos",
+      "team": {
+        "name": "Gracie Humaitá"
+      },
+      "beltRank": "Marrom"
+    },
+    {
+      "id": 4,
+      "name": "Lucas Oliveira",
+      "team": {
+        "name": "Checkmat"
+      },
+      "beltRank": "Preta"
+    },
+    {
+      "id": 5,
+      "name": "Rafael Pereira",
+      "team": {
+        "name": "Gracie Barra"
+      },
+      "beltRank": "Azul"
+    },
+    {
+      "id": 6,
+      "name": "Fernando Costa",
+      "team": {
+        "name": "Alliance Jiu-Jitsu"
+      },
+      "beltRank": "Roxa"
+    },
+    {
+      "id": 7,
+      "name": "Gustavo Almeida",
+      "team": {
+        "name": "Gracie Humaitá"
+      },
+      "beltRank": "Marrom"
+    },
+    {
+      "id": 8,
+      "name": "Ricardo Santos",
+      "team": {
+        "name": "Checkmat"
+      },
+      "beltRank": "Preta"
+    },
+    {
+      "id": 9,
+      "name": "Paulo Pereira",
+      "team": {
+        "name": "Gracie Barra"
+      },
+      "beltRank": "Azul"
+    },
+    {
+      "id": 10,
+      "name": "Fábio Costa",
+      "team": {
+        "name": "Alliance Jiu-Jitsu"
+      },
+      "beltRank": "Roxa"
+    },
+    {
+      "id": 11,
+      "name": "Gustavo Almeida",
+      "team": {
+        "name": "Gracie Humaitá"
+      },
+      "beltRank": "Marrom"
+    },
+    {
+      "id": 12,
+      "name": "Ricardo Santos",
+      "team": {
+        "name": "Checkmat"
+      },
+      "beltRank": "Preta"
+    },
+    {
+      "id": 13,
+      "name": "Paulo Pereira",
+      "team": {
+        "name": "Gracie Barra"
+      },
+      "beltRank": "Azul"
+    },
+    {
+      "id": 14,
+      "name": "Fábio Costa",
+      "team": {
+        "name": "Alliance Jiu-Jitsu"
+      },
+      "beltRank": "Roxa"
+    },
+    {
+      "id": 15,
+      "name": "Gustavo Almeida",
+      "team": {
+        "name": "Gracie Humaitá"
+      },
+      "beltRank": "Marrom"
+    },
+    {
+      "id": 16,
+      "name": "Ricardo Santos",
+      "team": {
+        "name": "Checkmat"
+      },
+      "beltRank": "Preta"
+    }
+  ]
+}

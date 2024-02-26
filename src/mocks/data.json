@@ -2,280 +2,143 @@
   "name": "Torneio de Jiu-Jitsu 2024",
   "location": "São Paulo, Brazil",
   "date": "2024-08-15",
-  "matches": [
+  "weightClass": "Leve",
+  "ageClass": "Adulto",
+  "gender": "Masculino",
+  "rounds": [
     {
-      "roundTitle": "Quarterfinals",
+      "bracket": "A",
       "matches": [
         {
           "fighters": [
             {
+              "id": 1,
               "name": "João Silva",
               "team": {
-                "name": "Gracie Barra",
-                "logo": "https://placehold.co/32"
+                "name": "Gracie Barra"
               },
-              "weightClass": "Leve",
               "beltRank": "Azul"
             },
             {
-              "name": "Maria Souza",
+              "id": 2,
+              "name": "Mário Souza",
               "team": {
-                "name": "Alliance Jiu-Jitsu",
-                "logo": "https://placehold.co/32"
+                "name": "Alliance Jiu-Jitsu"
               },
-              "weightClass": "Leve",
               "beltRank": "Roxa"
             }
           ],
-          "date": "2024-08-15T10:00:00Z",
-          "winner": {
-            "name": "João Silva",
-            "team": {
-              "name": "Gracie Barra",
-              "logo": "https://placehold.co/32"
-            },
-            "weightClass": "Leve",
-            "beltRank": "Azul"
-          }
+          "date": "2024-08-15T10:00:00Z"
         },
         {
           "fighters": [
             {
+              "id": 3,
               "name": "Pedro Santos",
               "team": {
-                "name": "Checkmat",
-                "logo": "https://placehold.co/32"
+                "name": "Checkmat"
               },
-              "weightClass": "Médio",
               "beltRank": "Marrom"
             },
             {
-              "name": "Ana Oliveira",
+              "id": 4,
+              "name": "Alan Oliveira",
               "team": {
-                "name": "Atos Jiu-Jitsu",
-                "logo": "https://placehold.co/32"
+                "name": "Atos Jiu-Jitsu"
               },
-              "weightClass": "Médio",
               "beltRank": "Azul"
             }
           ],
-          "date": "2024-08-15T10:00:00Z",
-          "winner": {
-            "name": "Ana Oliveira",
-            "team": {
-              "name": "Atos Jiu-Jitsu",
-              "logo": "https://placehold.co/32"
-            },
-            "weightClass": "Médio",
-            "beltRank": "Azul"
-          }
+          "date": "2024-08-15T10:00:00Z"
         },
         {
           "fighters": [
             {
+              "id": 5,
               "name": "Rafael Mendes",
               "team": {
-                "name": "Atos Jiu-Jitsu",
-                "logo": "https://placehold.co/32"
+                "name": "Atos Jiu-Jitsu"
               },
-              "weightClass": "Pena",
               "beltRank": "Preta"
             },
             {
+              "id": 6,
               "name": "Gabriela Garcia",
               "team": {
-                "name": "Checkmat",
-                "logo": "https://placehold.co/32"
+                "name": "Checkmat"
               },
-              "weightClass": "Pena",
               "beltRank": "Preta"
             }
           ],
-          "date": "2024-08-15T10:00:00Z",
-          "winner": {
-            "name": "Rafael Mendes",
-            "team": {
-              "name": "Atos Jiu-Jitsu",
-              "logo": "https://placehold.co/32"
+          "date": "2024-08-15T10:00:00Z"
+        }
+      ]
+    },
+    {
+      "bracket": "B",
+      "matches": [
+        {
+          "fighters": [
+            {
+              "id": 7,
+              "name": "Carlos Santos",
+              "team": {
+                "name": "Gracie Barra"
+              },
+              "beltRank": "Preta"
             },
-            "weightClass": "Pena",
-            "beltRank": "Preta"
-          }
+            {
+              "id": 8,
+              "name": "Lucas Alves",
+              "team": {
+                "name": "Nova União"
+              },
+              "beltRank": "Marrom"
+            }
+          ],
+          "date": "2024-08-15T10:00:00Z"
         },
         {
           "fighters": [
             {
-              "name": "Lucas Souza",
+              "id": 9,
+              "name": "Roberto Silva",
               "team": {
-                "name": "Gracie Barra",
-                "logo": "https://placehold.co/32"
+                "name": "Alliance"
               },
-              "weightClass": "Leve",
-              "beltRank": "Preta"
-            },
-            {
-              "name": "Juliana Lima",
-              "team": {
-                "name": "Alliance Jiu-Jitsu",
-                "logo": "https://placehold.co/32"
-              },
-              "weightClass": "Leve",
-              "beltRank": "Preta"
-            }
-          ],
-          "date": "2024-08-15T10:00:00Z",
-          "winner": {
-            "name": "Lucas Souza",
-            "team": {
-              "name": "Gracie Barra",
-              "logo": "https://placehold.co/32"
-            },
-            "weightClass": "Leve",
-            "beltRank": "Preta"
-          }
-        }
-      ]
-    },
-    {
-      "roundTitle": "Semifinals",
-      "matches": [
-        {
-          "fighters": [
-            {
-              "name": "João Silva",
-              "team": {
-                "name": "Gracie Barra",
-                "logo": "https://placehold.co/32"
-              },
-              "weightClass": "Leve",
               "beltRank": "Azul"
             },
             {
-              "name": "Ana Oliveira",
+              "id": 10,
+              "name": "Pedro Costa",
               "team": {
-                "name": "Atos Jiu-Jitsu",
-                "logo": "https://placehold.co/32"
+                "name": "GFTeam"
               },
-              "weightClass": "Médio",
-              "beltRank": "Azul"
+              "beltRank": "Roxa"
             }
           ],
-          "date": "2024-08-15T14:00:00Z",
-          "winner": {
-            "name": "Ana Oliveira",
-            "team": {
-              "name": "Atos Jiu-Jitsu",
-              "logo": "https://placehold.co/32"
-            },
-            "weightClass": "Médio",
-            "beltRank": "Azul"
-          }
+          "date": "2024-08-15T10:00:00Z"
         },
         {
           "fighters": [
             {
-              "name": "Rafael Mendes",
+              "id": 11,
+              "name": "Ricardo Oliveira",
               "team": {
-                "name": "Atos Jiu-Jitsu",
-                "logo": "https://placehold.co/32"
+                "name": "Checkmat"
               },
-              "weightClass": "Pena",
               "beltRank": "Preta"
             },
             {
-              "name": "Lucas Souza",
+              "id": 12,
+              "name": "Ana Clara",
               "team": {
-                "name": "Gracie Barra",
-                "logo": "https://placehold.co/32"
+                "name": "Atos Jiu-Jitsu"
               },
-              "weightClass": "Leve",
               "beltRank": "Preta"
             }
           ],
-          "date": "2024-08-15T14:00:00Z",
-          "winner": {
-            "name": "Rafael Mendes",
-            "team": {
-              "name": "Atos Jiu-Jitsu",
-              "logo": "https://placehold.co/32"
-            },
-            "weightClass": "Pena",
-            "beltRank": "Preta"
-          }
-        }
-      ]
-    },
-    {
-      "roundTitle": "Bronze Medal Game",
-      "matches": [
-        {
-          "fighters": [
-            {
-              "name": "João Silva",
-              "team": {
-                "name": "Gracie Barra",
-                "logo": "https://placehold.co/32"
-              },
-              "weightClass": "Leve",
-              "beltRank": "Azul"
-            },
-            {
-              "name": "Lucas Souza",
-              "team": {
-                "name": "Gracie Barra",
-                "logo": "https://placehold.co/32"
-              },
-              "weightClass": "Leve",
-              "beltRank": "Preta"
-            }
-          ],
-          "date": "2024-08-15T16:00:00Z",
-          "winner": {
-            "name": "Lucas Souza",
-            "team": {
-              "name": "Gracie Barra",
-              "logo": "https://placehold.co/32"
-            },
-            "weightClass": "Leve",
-            "beltRank": "Preta"
-          }
-        }
-      ]
-    },
-    {
-      "roundTitle": "Gold Medal Game",
-      "matches": [
-        {
-          "fighters": [
-            {
-              "name": "Ana Oliveira",
-              "team": {
-                "name": "Atos Jiu-Jitsu",
-                "logo": "https://placehold.co/32"
-              },
-              "weightClass": "Médio",
-              "beltRank": "Azul"
-            },
-            {
-              "name": "Rafael Mendes",
-              "team": {
-                "name": "Atos Jiu-Jitsu",
-                "logo": "https://placehold.co/32"
-              },
-              "weightClass": "Pena",
-              "beltRank": "Preta"
-            }
-          ],
-          "date": "2024-08-15T18:00:00Z",
-          "winner": {
-            "name": "Rafael Mendes",
-            "team": {
-              "name": "Atos Jiu-Jitsu",
-              "logo": "https://placehold.co/32"
-            },
-            "weightClass": "Pena",
-            "beltRank": "Preta"
-          }
+          "date": "2024-08-15T10:00:00Z"
         }
       ]
     }

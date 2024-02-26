@@ -1,0 +1,201 @@
+@import '../../styles/variables.scss';
+
+.match {
+  display: flex;
+  flex: 0 1 auto;
+  justify-content: center;
+  flex-direction: column;
+  align-items: flex-start;
+  position: relative;
+  padding: 2% 0;
+  transition: padding 0.2s linear;
+  flex-grow: 1;
+
+  &:nth-child(odd),
+  &:nth-child(even) {
+    margin-left: 2px;
+    margin-right: 0;
+    @media only print {
+      margin-left: 0;
+    }
+  }
+
+  &::after {
+    transition: width 0.2s linear;
+  }
+
+  @media (min-width: $breakpoint-sm) {
+    padding: 0 1em;
+    flex-grow: 1;
+    width: auto;
+
+    &::after {
+      position: absolute;
+      content: '';
+      display: block;
+      width: 1em;
+      height: 45%;
+    }
+
+    &:nth-child(odd)::after {
+      top: 50%;
+      border-top: $box-border-width solid $dark-gray;
+      transform: translateY(-1px);
+    }
+
+    &:nth-child(even)::after {
+      bottom: 50%;
+      border-bottom: $box-border-width solid $dark-gray;
+      transform: translateY(1px);
+    }
+  }
+
+  @media (min-width: $breakpoint-lg) {
+    padding: 0 0.5em;
+
+    &::after {
+      width: 0.5em;
+    }
+  }
+  @media print {
+    padding: 0 $lines-width-print;
+  }
+}
+.round:first-child.right-side .match {
+  padding-left: 0;
+}
+.round:last-child.left-side {
+ .match {
+   padding-right: 0;
+   &::after {
+     display: none;
+   }
+ }
+}
+
+.round:nth-last-child(2) {
+ .match {
+   &::after {
+     border-radius: 0;
+     border-right: 0;
+   }
+ }
+}
+.round:last-child.right-side {
+ .match {
+   &::before,
+   &::after {
+     left: 0;
+     border-right: 0;
+     border-left: $box-border-width solid $dark-gray;
+   }
+
+   &::before  {
+     border-bottom-right-radius: 0;
+     height: 45%;
+   }
+   &:nth-child(odd)::before {
+     .rounds & {
+       border-top-left-radius: 0.6em;
+       border-top: $box-border-width solid $dark-gray;
+       border-bottom: none;
+     }
+   }
+   &:nth-child(even)::before {
+     .rounds & {
+       border-bottom-left-radius: 0.6em;
+       border-bottom: $box-border-width solid $dark-gray;
+       border-top: none;
+     }
+   }
+ }
+}
+
+.winner,
+.left-side {
+  .match {
+    @media (min-width: $breakpoint-sm) {
+      &::after {
+        right: 0;
+        border-right: $box-border-width solid $dark-gray;
+      }
+      &:nth-child(odd)::after {
+        .rounds & {
+          border-top-right-radius: 0.6em;
+        }
+      }
+      &:nth-child(even)::after {
+        .rounds & {
+          border-bottom-right-radius: 0.6em;
+        }
+      }
+    }
+  }
+}
+.left-side:has(+ .winner) {
+  .match {
+    &:nth-child(odd)::after {
+      .rounds & {
+        height: 0;
+      }
+    }
+  }
+}
+.right-side {
+  .match {
+    @media (min-width: $breakpoint-sm) {
+      &::after {
+        left: 0;
+        border-left: $box-border-width solid $dark-gray;
+      }
+      &:nth-child(odd)::after {
+        .rounds & {
+          border-top-left-radius: 0.6em;
+        }
+      }
+
+      &:nth-child(even)::after {
+
+        .rounds & {
+          border-bottom-left-radius: 0.6em;
+        }
+      }
+    }
+  }
+}
+.winner {
+  .match {
+    &::before  {
+      height: 0;
+    }
+    &::after  {
+      height: 0;
+    }
+  }
+}
+.winner + .right-side {
+  .match {
+    &:nth-child(odd)::after {
+      .rounds & {
+        height: 0;
+      }
+    }
+  }
+}
+.round:first-child,
+.round:last-child {
+  .match {
+    &:nth-child(odd) {
+      margin-bottom: calc(#{$box-border-width} / -2);
+      margin-top: 1em;
+    }
+
+    &:nth-child(even) {
+      margin-bottom: 1em;
+      margin-top: calc(#{$box-border-width} / -2);
+    }
+    &::after {
+      height: 42%;
+    }
+  }
+}

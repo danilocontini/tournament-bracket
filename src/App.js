@@ -1,6 +1,6 @@
 import './App.scss';
 import Tournament from './components/Tournament/Tournament';
-import tournamentData from './mocks/data.json';
+import tournamentData from './mocks/new_data.json';
 
 function App() {
   return (

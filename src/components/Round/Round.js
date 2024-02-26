@@ -1,24 +1,18 @@
 import React from 'react';
 import { Match } from '../Match/Match';
+import './Round.scss';
 
-export const Round = ({ roundTitle, matches }) => {
+export const Round = React.memo(({ matches, className }) => {
   return (
-    <div class={`
-      tournament-bracket__round
-      tournament-bracket__round--${
-        roundTitle
-          .toLowerCase()
-          .replace(' ', '-')
-      }
-    `}>
-      <h3 className="tournament-bracket__round-title">
-        {roundTitle}
-      </h3>
-      <ul className="tournament-bracket__list">
-        {matches.map((match, index) => (
-          <Match key={index} match={match} />
+    <div className={`round ${className}`}>
+      <ul className="matches">
+        {matches?.map((match, index) => (
+          <Match
+            key={`match-${index}`}
+            tabId={index}
+            fighters={match.fighters} />
         ))}
       </ul>
     </div>
   );
-}
+});

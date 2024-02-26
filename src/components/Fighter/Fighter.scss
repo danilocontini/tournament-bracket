@@ -1,0 +1,264 @@
+@import '../../styles/variables.scss';
+
+.fighter {
+  display: flex;
+  flex-wrap: wrap;
+  width: 32px;
+  background-color: #ffffff;
+  padding: 1em;
+  border: $box-border-width solid $dark-gray;
+  border-radius: 0.3em;
+  box-shadow: 0 2px 0 0 #e5e5e5;
+  outline: none;
+  cursor: pointer;
+  transition: padding 0.2s ease-in-out, border 0.2s linear;
+  @media print {
+    width: 5mm;
+    padding: 3mm;
+    min-height: 9mm;
+  }
+
+  &__blanks {
+    font-size: 0.7rem;
+    width: 100%;
+    margin-bottom: 1em;
+    @media print {
+      font-size: 3mm;
+      margin-bottom: 1mm;
+    }
+    span:nth-child(2) {
+      margin-left: 0.5em;
+      margin-right: 0.5em;
+    }
+  }
+
+  &__data {
+    display: flex;
+    flex-grow: 1;
+    margin-top: .5em;
+    @media print {
+      width: 100mm;
+    }
+    &-name {
+      font-size: 1rem;
+      font-weight: 900;
+      margin-left: 0.5em;
+    }
+
+    &-team {
+      margin-left: auto;
+      font-size: 0.95rem;
+    }
+  }
+
+  &::after {
+    position: absolute;
+    content: '';
+    display: block;
+    width: 1em;
+    height: 45%;
+  }
+
+  .round:first-child & {
+    &::after {
+      right: -18px;
+      border-right: $lines-width solid $dark-gray;
+    }
+    &:nth-child(odd)::after {
+      top: 65%;
+      border-top: $lines-width solid $dark-gray;
+      transform: translateY(-1px);
+      @media print {
+        transform: translateY(0mm);
+      }
+      .rounds & {
+        border-top-right-radius: 0.6em;
+      }
+    }
+    &:nth-child(even)::after {
+      bottom: 65%;
+      border-bottom: $lines-width solid $dark-gray;
+      transform: translateY(1px);
+      .rounds & {
+        border-bottom-right-radius: 0.6em;
+      }
+    }
+  }
+  .round:last-child & {
+    &::after {
+      left: -18px;
+      border-left: $lines-width solid $dark-gray;
+    }
+    &:nth-child(odd)::after {
+      top: 65%;
+      border-top: $lines-width solid $dark-gray;
+      transform: translateY(-1px);
+      @media print {
+        transform: translateY(0mm);
+      }
+      .rounds & {
+        border-top-left-radius: 0.6em;
+      }
+    }
+    &:nth-child(even)::after {
+      bottom: 65%;
+      border-bottom: $lines-width solid $dark-gray;
+      transform: translateY(1px);
+      .rounds & {
+        border-bottom-left-radius: 0.6em;
+      }
+    }
+  }
+
+  li {
+    white-space: nowrap;
+    text-align: center;
+  }
+
+  &:focus {
+    border-color: #2196F3;
+  }
+
+  &::before,
+  &::after {
+    transition: all 0.2s linear;
+  }
+
+  @media (max-width: $breakpoint-xs) {
+    padding: 0.75em 0.5em;
+  }
+
+  @media (min-width: $breakpoint-sm) {
+    &::before,
+    &::after {
+      position: absolute;
+      z-index: 1;
+      content: '';
+      display: block;
+      width: 1em;
+      height: 10%;
+    }
+
+    &::before  {
+      bottom: 50%;
+      border-bottom: $box-border-width solid $dark-gray;
+      transform: translate(0, 1px);
+    }
+
+    &::after  {
+      top: 50%;
+      border-top: $box-border-width solid $dark-gray;
+      transform: translate(0, -1px);
+    }
+  }
+
+  @media (min-width: $breakpoint-lg) {
+    &::before,
+    &::after {
+      width: .5em;
+    }
+
+    &::before {
+      transform: translate(0, 1px);
+    }
+
+    &::after {
+      transform: translate(0, -1px);
+    }
+  }
+  @media print {
+    &::before,
+    &::after {
+      width: 3.5mm;
+    }
+    &::before {
+      height: 6mm;
+    }
+    &::after {
+      height: 6mm;
+    }
+  }
+}
+
+.winner,
+.left-side {
+  .fighter {
+    @media (min-width: $breakpoint-sm) {
+      &::before,
+      &::after {
+        left: 0;
+        border-left: $box-border-width solid $dark-gray;
+      }
+      &::before  {
+        .rounds & {
+          border-bottom-left-radius: 0.6em;
+        }
+      }
+
+      &::after  {
+        .rounds & {
+          border-top-left-radius: 0.6em;
+        }
+      }
+    }
+  }
+}
+.winner {
+  .fighter {
+    &::before  {
+      height: 0;
+      display: none;
+    }
+    &::after  {
+      height: 0;
+    }
+  }
+}
+.right-side {
+  .fighter {
+    @media (min-width: $breakpoint-sm) {
+      &::before,
+      &::after {
+        right: 0;
+        border-right: $box-border-width solid $dark-gray;
+      }
+      &::before  {
+        .rounds & {
+          border-bottom-right-radius: 0.6em;
+        }
+      }
+      &::after  {
+        .rounds & {
+          border-top-right-radius: 0.6em;
+        }
+      }
+    }
+  }
+}
+.round:first-child,
+.round:last-child.right-side {
+  .fighter {
+    &::before,
+    &::after {
+      display: none;
+    }
+  }
+}
+.round:last-child.left-side {
+  .fighter {
+    &::before,
+    &::after {
+      border-left: 0;
+    }
+    &::before  {
+      border-bottom-left-radius: 0;
+    }
+  }
+}
+
+.round:first-child,
+.round:last-child {
+  .fighter {
+    width: 100%;
+  }
+}

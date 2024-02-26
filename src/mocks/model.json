@@ -1,0 +1,178 @@
+{
+  "rounds": [
+    {
+      "matches": [
+        {
+          "fighters": [
+            { "id": 1 },
+            { "id": 3 }
+          ]
+        },
+        {
+          "fighters": [
+            { "id": 5 },
+            { "id": 7 }
+          ]
+        },
+        {
+          "fighters": [
+            { "id": 9 },
+            { "id": 11 }
+          ]
+        },
+        {
+          "fighters": [
+            { "id": 13 },
+            { "id": 15 }
+          ]
+        }
+      ]
+    },
+    {
+      "matches": [
+        {
+          "fighters": [
+            {},
+            {}
+          ]
+        },
+        {
+          "fighters": [
+            {},
+            {}
+          ]
+        },
+        {
+          "fighters": [
+            {},
+            {}
+          ]
+        },
+        {
+          "fighters": [
+            {},
+            {}
+          ]
+        }
+      ]
+    },
+    {
+      "matches": [
+        {
+          "fighters": [
+            {},
+            {}
+          ]
+        },
+        {
+          "fighters": [
+            {},
+            {}
+          ]
+        }
+      ]
+    },
+    {
+      "matches": [
+        {
+          "fighters": [
+            {},
+            {}
+          ]
+        }
+      ]
+    },
+    {
+      "matches": [
+        {
+          "fighters": [
+            {},
+            {}
+          ]
+        }
+      ]
+    },
+    {
+      "matches": [
+        {
+          "fighters": [
+            {},
+            {}
+          ]
+        }
+      ]
+    },
+    {
+      "matches": [
+        {
+          "fighters": [
+            {},
+            {}
+          ]
+        },
+        {
+          "fighters": [
+            {},
+            {}
+          ]
+        }
+      ]
+    },
+    {
+      "matches": [
+        {
+          "fighters": [
+            {},
+            {}
+          ]
+        },
+        {
+          "fighters": [
+            {},
+            {}
+          ]
+        },
+        {
+          "fighters": [
+            {},
+            {}
+          ]
+        },
+        {
+          "fighters": [
+            {},
+            {}
+          ]
+        }
+      ]
+    },
+    {
+      "matches": [
+        {
+          "fighters": [
+            { "id": 2 },
+            { "id": 4 }
+          ]
+        },
+        {
+          "fighters": [
+            { "id": 6 },
+            { "id": 8 }
+          ]
+        },
+        {
+          "fighters": [
+            { "id": 10 },
+            { "id": 12 }
+          ]
+        },
+        {
+          "fighters": [
+            { "id": 14 },
+            { "id": 16 }
+          ]
+        }
+      ]
+    }
+  ]
+}
