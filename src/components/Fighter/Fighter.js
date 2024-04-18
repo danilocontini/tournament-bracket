@@ -26,4 +26,6 @@ export const Fighter = React.memo(({ id, name, team }) => {
       )}
     </div>
   );
-})
+}, (prevProps, nextProps) => {
+  return (prevProps.id === nextProps.id) && (prevProps.name === nextProps.name) && (prevProps.team === nextProps.team);
+});

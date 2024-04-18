@@ -1,26 +1,9 @@
-// src/components/Tournament.js
 import React from 'react';
 import { Round } from '../Round/Round';
 import './Tournament.scss';
 
-const Tournament = ({ tournament }) => {
-  const {
-    name,
-    location,
-    date,
-    gender,
-    weightClass,
-    fighters,
-    ageClass
-  } = tournament;
-  const dateObj = new Date(date);
-  const options = {
-    weekday: "long",
-    year: "numeric",
-    month: "long",
-    day: "numeric",
-  };
-  const formattedDate = dateObj.toLocaleDateString('pt-BR', options);
+export const Tournament = () => {
+  const [tournament, setTournament] = React.useState({});
   const [rounds, setRounds] = React.useState();
 
   const buildStructure = React.useCallback((fighterList) => {
@@ -28,7 +11,7 @@ const Tournament = ({ tournament }) => {
     const teamA = [];
     const teamB = [];
 
-    fighterList.forEach(fighter => {
+    fighterList?.forEach(fighter => {
       if (fighter.id % 2 !== 0) {
         teamA.push(fighter);
       } else {
@@ -38,13 +21,13 @@ const Tournament = ({ tournament }) => {
 
     const decrement = (value) => {
       for (let i = value/2; i >= 1; i = i/2) {
-        tournament.rounds.push({ matches: new Array(i).fill({ fighters: [{ id: null }] }), className: 'left-side' })
+        tournament?.rounds?.push({ matches: new Array(i).fill({ fighters: [{ id: null }] }), className: 'left-side' })
       }
     }
 
     const increment = (value) => {
       for (let i = 1; i <= value/2; i = i*2) {
-        tournament.rounds.push({ matches: new Array(i).fill({ fighters: [{ id: null }] }), className: 'right-side'})
+        tournament?.rounds?.push({ matches: new Array(i).fill({ fighters: [{ id: null }] }), className: 'right-side'})
       }
     }
     const roundA = teamA.map((fighter, index) => {
@@ -59,25 +42,34 @@ const Tournament = ({ tournament }) => {
       }
       return false;
     }).filter(Boolean);
-    tournament.rounds.push({ matches: roundA, className: 'left-side'});
+    tournament?.rounds?.push({ matches: roundA, className: 'left-side'});
     decrement(teamA.length);
-    tournament.rounds.push({ matches: new Array(1).fill({ fighters: [{ id: null }] }), className: 'winner'})
+    tournament?.rounds?.push({ matches: new Array(1).fill({ fighters: [{ id: null }] }), className: 'winner'})
     increment(teamB.length);
-    tournament.rounds.push({ matches: roundB, className: 'right-side'});
+    tournament?.rounds?.push({ matches: roundB, className: 'right-side'});
     return tournament;
   }, []);
 
-  React.useEffect(() => {
-    const structure = buildStructure(fighters);
+  const fetchTournament = React.useCallback(async () => {
+    const response = await fetch('https://nutatami.wiremockapi.cloud/gc/1');
+    const data = await response.json();
+    setTournament(data);
+    debugger;
+    const structure = buildStructure(data?.fighters);
     setRounds(structure.rounds);
     return () => {}
-  }, [fighters, buildStructure]);
+  }, [buildStructure]);
+
+  React.useEffect(() => {
+    fetchTournament();
+    return () => {}
+  }, [fetchTournament]);
 
   return (
     <div className="container">
-      <h1>{name}</h1>
-      <h2>{location}, {formattedDate}</h2>
-      <h3 className="category">Categoria: {gender} - {ageClass} - {weightClass}</h3>
+      <h1>{tournament?.name}</h1>
+      <h2>{tournament?.location}, {tournament?.formattedDate}</h2>
+      <h3 className="category">Categoria: {tournament?.gender} - {tournament?.ageClass} - {tournament?.weightClass}</h3>
       <div className="rounds">
         {rounds?.map((round, index) => (
           <Round
@@ -90,5 +82,3 @@ const Tournament = ({ tournament }) => {
     </div>
   );
 };
-
-export default Tournament;

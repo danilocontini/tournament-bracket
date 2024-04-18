@@ -1,11 +1,10 @@
 import './App.scss';
-import Tournament from './components/Tournament/Tournament';
-import tournamentData from './mocks/new_data.json';
+import { Tournament } from './components/Tournament/Tournament';
 
 function App() {
   return (
     <div className="App">
-      <Tournament tournament={tournamentData} />
+      <Tournament />
     </div>
   );
 }

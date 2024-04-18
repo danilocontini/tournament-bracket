@@ -15,4 +15,6 @@ export const Round = React.memo(({ matches, className }) => {
       </ul>
     </div>
   );
+}, (prevProps, nextProps) => {
+  return (prevProps.matches === nextProps.matches) && (prevProps.className === nextProps.className);
 });

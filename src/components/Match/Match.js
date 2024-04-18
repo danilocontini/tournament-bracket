@@ -3,14 +3,16 @@ import React from 'react';
 import { Fighter } from '../Fighter/Fighter';
 import './Match.scss';
 
-export const Match = ({ tabId, fighters }) => {
+export const Match = React.memo(({ tabId, fighters }) => {
   return (
     <>
       {fighters?.map((fighter, index) => (
-        <li className="match" tabIndex={tabId}>
-          <Fighter key={`fighter-${index}`} {...fighter} />
+        <li key={`fighter-${index}`} className="match" tabIndex={tabId}>
+          <Fighter {...fighter} />
         </li>
       ))}
     </>
   );
-};
+}, (prevProps, nextProps) => {
+  return (prevProps.tabId === nextProps.tabId) && (prevProps.fighters === nextProps.fighters);
+});
